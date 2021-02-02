@@ -13,7 +13,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: ${{GITHUB_REPOSITORY }}:${{ github.event.pull_request.number }}
+          tags: ${{ github.repository }}:${{ github.event.head_ref }}
 
       -
         name: Image digest
